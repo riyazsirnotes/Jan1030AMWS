@@ -6,6 +6,8 @@ public class SumTest {
 	
 		Sum obj1=new Sum();
 		
+		//obj1.Sum();
+		
 		obj1.add(10, 20);
 		
 		obj1.add(10.22, 20.33);

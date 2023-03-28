@@ -2,6 +2,12 @@ package mar21st;
 
 public class Sum {
 	
+	//constructor
+	  Sum()
+	{
+		System.out.println(" In Constructor .....");
+	}
+	
 	public void add(int x,int y)
 	{
 		System.out.println("sum is "+ (x+y));
