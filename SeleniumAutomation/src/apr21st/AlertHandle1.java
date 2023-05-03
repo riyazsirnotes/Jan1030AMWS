@@ -57,15 +57,5 @@ public class AlertHandle1 {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
