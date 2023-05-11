@@ -18,16 +18,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	
-	FileInputStream fis1;
-	Properties pr;
+	public FileInputStream fis1;
+	public static Properties pr;
 	public WebDriver driver;
 	@BeforeTest
 	public void fileSetUp() throws IOException
 	{
-		
+		 System.out.println("In Before Test ");
 		 fis1=new FileInputStream("Properties\\config.properties");
 		 pr=new Properties();
-		pr.load(fis1);
+		 pr.load(fis1);
 		
 	}
 	
@@ -35,7 +35,7 @@ public class BaseTest {
 	@BeforeMethod
 	public void setUp()
 	{
-		
+		System.out.println("In Before Method");
 		String browserName=pr.getProperty("browser");
 		
 		if(browserName.equalsIgnoreCase("chrome"))
@@ -68,6 +68,8 @@ public class BaseTest {
 	@AfterMethod
 	public void teardown() throws InterruptedException
 	{
+		
+		System.out.println("In after method ");
 		Thread.sleep(5000);
 		
 		driver.quit();
